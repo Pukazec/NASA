@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="theme_key" translatable="false">Theme</string>
+    <string name="language_key" translatable="false">Language</string>
+</resources>

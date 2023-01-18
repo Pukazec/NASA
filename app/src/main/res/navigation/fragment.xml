@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@id/menuItems"
+    android:id="@+id/fragment">
+
+    <fragment
+        tools:layout="@layout/fragment_items"
+        android:label="@string/items"
+        android:id="@+id/menuItems"
+        android:name="leo.skvorc.nasa.ItemsFragment" />
+
+    <fragment
+        tools:layout="@layout/fragment_about"
+        android:label="@string/about"
+        android:id="@+id/menuAbout"
+        android:name="leo.skvorc.nasa.AboutFragment" />
+
+    <fragment
+        tools:layout="@layout/fragment_settings"
+        android:label="@string/settings"
+        android:id="@+id/menuSettings"
+        android:name="leo.skvorc.nasa.SettingsFragment" />
+
+    <fragment
+        tools:layout="@layout/fragment_maps"
+        android:label="@string/maps"
+        android:id="@+id/menuMaps"
+        android:name="leo.skvorc.nasa.MapsFragment" />
+
+</navigation>

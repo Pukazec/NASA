@@ -1,0 +1,32 @@
+<resources>
+    <string name="app_name">NASA</string>
+    <string name="please_wait">Please wait</string>
+    <string name="no_internet">No internet</string>
+    <string name="application_made_by_pukazec">Application made by PukaZec</string>
+    <string name="items">Items</string>
+    <string name="about">About</string>
+    <string name="exit">Exit</string>
+    <string name="really">Really exit app?</string>
+    <string name="cancel">Cancel</string>
+    <string name="ok">Ok</string>
+    <string name="date">Date</string>
+    <string name="title">Title</string>
+    <string name="explanation">Explanation</string>
+    <string name="dialog_yes">Yes</string>
+    <string name="dialog_no">No</string>
+    <string name="delete_item">Delete item</string>
+    <string name="are_you_sure">Are you sure</string>
+    <string name="settings">Settings</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="theme">Theme</string>
+    <string name="please_select_theme">Please select theme</string>
+    <string name="please_select_language">Please select language</string>
+    <string name="language">Language</string>
+    <string name="light">Light</string>
+    <string name="dark">Dark</string>
+    <string name="english">English</string>
+    <string name="croatian">Croatian</string>
+    <string name="maps">Maps</string>
+    <string name="log_in">Log in</string>
+    <string name="web_client_id">405865700897-g82uck7vcb3eclh8h4aj243rss373tnc.apps.googleusercontent.com</string>
+</resources>
