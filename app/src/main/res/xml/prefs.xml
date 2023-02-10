@@ -9,12 +9,4 @@
         android:entryValues="@array/theme_values"
         android:defaultValue="2" />
 
-    <ListPreference
-        android:key="@string/language_key"
-        android:summary="@string/please_select_language"
-        android:title="@string/language"
-        android:entries="@array/language_texts"
-        android:entryValues="@array/language_values"
-        android:defaultValue="1" />
-
 </PreferenceScreen>

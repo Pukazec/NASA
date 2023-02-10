@@ -8,12 +8,4 @@
         <item>1</item>
         <item>2</item>
     </string-array>
-    <string-array name="language_texts">
-        <item>@string/english</item>
-        <item>@string/croatian</item>
-    </string-array>
-    <string-array name="language_values">
-        <item>1</item>
-        <item>2</item>
-    </string-array>
 </resources>

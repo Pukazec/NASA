@@ -9,7 +9,7 @@
     <item
         android:title="Maps"
         android:id="@+id/menuMaps"
-        android:icon="@drawable/flat_earth" />
+        android:icon="@drawable/map" />
 
     <item
         android:title="@string/settings"
