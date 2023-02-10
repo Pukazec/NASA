@@ -1,5 +1,6 @@
 package leo.skvorc.nasa
 
+import android.content.Context
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -17,12 +18,26 @@ class SettingsFragment : Fragment() {
     ): View? {
         binding = FragmentSettingsBinding.inflate(inflater, container, false)
 
+        val prefs = activity?.getSharedPreferences("prefs", Context.MODE_PRIVATE)
+        if (prefs != null) {
+            val state = prefs.getInt("theme", 1)
+            if (state == 1) {
+                binding.theme.isChecked = false
+            } else {
+                binding.theme.isChecked = true
+            }
+        }
+
         binding.theme.setOnClickListener {
-            if (binding.theme.isChecked) {
+            val theme: Int
+            if (binding.theme.isChecked) { AppCompatDelegate.MODE_NIGHT_YES
+                theme = AppCompatDelegate.MODE_NIGHT_YES
                 AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
             } else {
+                theme = AppCompatDelegate.MODE_NIGHT_NO
                 AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
             }
+            prefs?.edit()?.putInt("theme", theme)?.commit()
         }
 
         return binding.root

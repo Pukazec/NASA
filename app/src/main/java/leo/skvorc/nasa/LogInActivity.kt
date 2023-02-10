@@ -1,10 +1,12 @@
 package leo.skvorc.nasa
 
 import android.app.Activity
+import android.content.Context
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
+import androidx.appcompat.app.AppCompatDelegate
 import com.google.android.gms.auth.api.identity.BeginSignInRequest
 import com.google.android.gms.auth.api.identity.Identity
 import com.google.android.gms.auth.api.identity.SignInClient
@@ -30,6 +32,10 @@ class LogInActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityLogInBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        val prefs = getSharedPreferences("prefs", Context.MODE_PRIVATE)
+        val theme = prefs.getInt("theme", 1)
+        AppCompatDelegate.setDefaultNightMode(theme)
 
         auth = FirebaseAuth.getInstance()
 
