@@ -11,6 +11,6 @@ class NasaReceiver : BroadcastReceiver() {
 
     override fun onReceive(context: Context, intent: Intent) {
     //    context.setBooleanPreference(DATA_IMPORTED)
-        context.startActivity<LogInActivity>()
+        context.startActivity<HostActivity>()
     }
 }

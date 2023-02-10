@@ -18,8 +18,23 @@
         android:theme="@style/Theme.NASA"
         tools:targetApi="31">
         <activity
+            android:name=".RegisterActivity"
+            android:exported="false"
+            android:noHistory="true"
+            android:theme="@style/Theme.NASA.NoActionBar">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name=".LogInActivity"
-            android:exported="false">
+            android:exported="true"
+            android:noHistory="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
@@ -66,11 +81,6 @@
             android:noHistory="true"
             android:screenOrientation="portrait"
             android:theme="@style/SplashScreenTheme">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
 
             <meta-data
                 android:name="android.app.lib_name"

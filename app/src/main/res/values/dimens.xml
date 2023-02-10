@@ -17,4 +17,6 @@
     <dimen name="radius">9dp</dimen>
     <dimen name="ivPagerHeight">300dp</dimen>
     <dimen name="btn_text">33sp</dimen>
+    <dimen name="user_text_size">25sp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
 </resources>

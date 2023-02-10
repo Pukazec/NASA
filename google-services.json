@@ -1,0 +1,68 @@
+{
+  "project_info": {
+    "project_number": "405865700897",
+    "project_id": "fir-authentication-f4373",
+    "storage_bucket": "fir-authentication-f4373.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:405865700897:android:f57506b17e4c8c13230d60",
+        "android_client_info": {
+          "package_name": "leo.skvorc.firebaseauthentication"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "405865700897-g82uck7vcb3eclh8h4aj243rss373tnc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB9vaDLQLEXpRePZEpIosEAkU2vslah3Ps"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "405865700897-g82uck7vcb3eclh8h4aj243rss373tnc.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:405865700897:android:d17f246cb6a42979230d60",
+        "android_client_info": {
+          "package_name": "leo.skvorc.nasa"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "405865700897-g82uck7vcb3eclh8h4aj243rss373tnc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB9vaDLQLEXpRePZEpIosEAkU2vslah3Ps"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "405865700897-g82uck7vcb3eclh8h4aj243rss373tnc.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

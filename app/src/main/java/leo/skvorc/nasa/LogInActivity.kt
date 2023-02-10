@@ -21,12 +21,10 @@ import leo.skvorc.nasa.framework.startActivity
 class LogInActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityLogInBinding
-
     private lateinit var auth: FirebaseAuth
-    private lateinit var googleSignInClient: GoogleSignInClient
-
-    private lateinit var oneTapClient: SignInClient
-    private lateinit var signInRequest: BeginSignInRequest
+    ///private lateinit var googleSignInClient: GoogleSignInClient
+    //private lateinit var oneTapClient: SignInClient
+    //private lateinit var signInRequest: BeginSignInRequest
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -35,7 +33,8 @@ class LogInActivity : AppCompatActivity() {
 
         auth = FirebaseAuth.getInstance()
 
-        val gso = GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
+        setUpListeners()
+        /*val gso = GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
             .requestIdToken(getString(R.string.web_client_id))
             .requestEmail()
             .build()
@@ -45,8 +44,6 @@ class LogInActivity : AppCompatActivity() {
         binding.btnLogIn.setOnClickListener {
             signInGoogle()
         }
-
-
 
         oneTapClient = Identity.getSignInClient(this)
         signInRequest = BeginSignInRequest.builder()
@@ -61,9 +58,28 @@ class LogInActivity : AppCompatActivity() {
                     .build()
             )
             .setAutoSelectEnabled(true)
-            .build()
+            .build()*/
     }
 
+    private fun setUpListeners() {
+        binding.btnRegister.setOnClickListener {
+            startActivity<RegisterActivity>()
+        }
+
+        binding.btnLogIn.setOnClickListener {
+            val email = binding.etEmail.text.toString()
+            val password = binding.etPassword.text.toString()
+
+            if (email.isNotEmpty() && password.isNotEmpty()) {
+                auth.signInWithEmailAndPassword(email,password).addOnCompleteListener {
+                    if (it.isSuccessful) startActivity<SplashScreenActivity>()
+                    else Toast.makeText(this, it.exception.toString(), Toast.LENGTH_LONG).show()
+                }
+            }
+            else Toast.makeText(this, getString(R.string.fill_all_fealds), Toast.LENGTH_LONG).show()
+        }
+    }
+/*
     private fun signInGoogle() {
         val signInIntent = googleSignInClient.signInIntent
         launcher.launch(signInIntent)
@@ -75,6 +91,7 @@ class LogInActivity : AppCompatActivity() {
             val task = GoogleSignIn.getSignedInAccountFromIntent(result.data)
             handleResults(task)
         }
+        if (result.resultCode == Activity.RESULT_CANCELED) { startActivity<HostActivity>() }
     }
 
     private fun handleResults(task: Task<GoogleSignInAccount>) {
@@ -97,5 +114,5 @@ class LogInActivity : AppCompatActivity() {
                 Toast.makeText(this, it.exception.toString(), Toast.LENGTH_LONG).show()
             }
         }
-    }
+    }*/
 }

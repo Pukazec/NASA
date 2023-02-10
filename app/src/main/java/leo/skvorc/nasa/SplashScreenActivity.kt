@@ -1,15 +1,12 @@
 package leo.skvorc.nasa
 
 import android.os.Bundle
-import android.os.Handler
-import android.os.Looper
 import android.view.View
-import android.view.WindowManager
 import androidx.appcompat.app.AppCompatActivity
 import leo.skvorc.nasa.databinding.ActivitySplashScreenBinding
 import leo.skvorc.nasa.framework.*
 
-private const val DELAY = 3000L
+private const val DELAY = 1L
 const val DATA_IMPORTED = "leo.skvorc.nasa.data_imported"
 
 class SplashScreenActivity : AppCompatActivity() {
@@ -33,7 +30,7 @@ class SplashScreenActivity : AppCompatActivity() {
 
     private fun redirect() {
         if (getBooleanPreference(DATA_IMPORTED)) {
-            callDelayed(DELAY) { startActivity<LogInActivity>() }
+            callDelayed(DELAY) { startActivity<HostActivity>() }
         } else {
             if (isOnline()) {
                 NasaService.enqueue(this)
