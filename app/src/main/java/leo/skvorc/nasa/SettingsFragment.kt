@@ -21,11 +21,7 @@ class SettingsFragment : Fragment() {
         val prefs = activity?.getSharedPreferences("prefs", Context.MODE_PRIVATE)
         if (prefs != null) {
             val state = prefs.getInt("theme", 1)
-            if (state == 1) {
-                binding.theme.isChecked = false
-            } else {
-                binding.theme.isChecked = true
-            }
+            binding.theme.isChecked = state != 1
         }
 
         binding.theme.setOnClickListener {
